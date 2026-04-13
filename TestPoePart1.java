@@ -27,10 +27,10 @@ public class TestPoePart1 {
     }
     //Test if the password meets the complexity of the requirements
     @Test
-    public void testInvalidPasswordValid() {
+    public void testInvalidPassword() {
         String expectedPassword = "Ch&&sec@ke99!";
         boolean actual = PoePart1.checkPasswordComplexity(expectedPassword);
-        assertEquals(false, actual,"Expect the password to fail to meet the complexity rules");
+        assertEquals(true, actual,"Expect the password to fail ");
     }
     //Test if the password does not meet the complexity of the requirements
     @Test
@@ -44,7 +44,7 @@ public class TestPoePart1 {
     public void testValidPhoneNumber() {
         String expectedPhone = "+27839868976";
         boolean actual = PoePart1.checkCellPhoneNumber(expectedPhone);
-        assertEquals(false, actual,"Expect the phone number to be valid");
+        assertEquals(true, actual,"Expect the phone number to be valid");
     }
     //Test if the cell phone is incorrectly formatted
     @Test
